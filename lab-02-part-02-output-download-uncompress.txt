@@ -18,7 +18,7 @@ $ echo hello
 
 Copy and paste the output below.
 ----------
-
+hello
 
 
 ==========
@@ -28,7 +28,7 @@ $ echo hello there
 
 Copy and paste the output below.
 ----------
-
+hello there
 
 
 ==========
@@ -39,7 +39,7 @@ $ echo good mornin'
 Copy and paste the output below.
 ----------
 
-
+> 
 
 ==========
 4. Uh-oh... we're stuck!
@@ -56,7 +56,7 @@ $ echo "good mornin'"
 
 Copy and paste the output below.
 ----------
-
+good mornin'
 
 
 ==========
@@ -66,6 +66,7 @@ $ echo *
 
 What happens?
 ----------
+Applications Desktop Documents Downloads Library Movies Music Pictures Public
 
 
 
@@ -75,7 +76,7 @@ What happens?
 Write the command that you used below:
 ----------
 
-
+clear
 
 ==========
 We're going to practice downloading files from a web site.  We'll use this practice to download more lab materials!
@@ -87,6 +88,12 @@ $ curl google.com
 
 Copy and paste the output below.
 ----------
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
 
 
 
@@ -98,6 +105,8 @@ $ curl www.google.com
 Copy and paste the output below, but not the whole thing!  Just copy up to the part that has the title tags (<title>......</title>).
 ----------
 
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
 
 
 ==========
@@ -106,14 +115,19 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 Write the command you used below.  Also copy and paste the output below.
 ----------
 
+curl -o filename.txt http://google.com
 
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   219  100   219    0     0    348      0 --:--:-- --:--:-- --:--:--   349
 
 ==========
 11. Now let's download the lab file for this homework.  First, figure out what directory you're in.
 
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
-
+pwd
+/Users/macowner
 
 
 ==========
@@ -121,7 +135,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
-
+cd ~
 
 
 ==========
@@ -137,7 +151,9 @@ Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
-
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  935k  100  935k    0     0  5052k      0 --:--:-- --:--:-- --:--:-- 5056k
 
 
 ==========
@@ -145,6 +161,7 @@ Write down the command that you used to download the file below.  Additionally, 
 
 Write down the command that you used to uncompress the file.
 ----------
+  unzip /Users/macowner/downloads.mtec1002-lab-02.zip 
 
 
 
@@ -165,7 +182,15 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 Copy and paste the output below.
 ----------
 
-
+Applications			Public
+Desktop				__MACOSX
+Documents			filename.mtec1002-lab-02.zip
+Downloads			filename.txt
+Library				mtec1002-lab-02
+Movies				mtec1002-lab-02 2
+Music				stuff
+Pictures
+macs-MacBook-Pro-337:~ macowner$ 
 
 ==========
 17. Change into the "stuff" directory that you just created.  Run the following command (we haven't learned this exact command yet, but we will in the next lab!) exactly as described below:
@@ -177,7 +202,7 @@ List the files in the directory you're currently in (which should be stuff).
 Copy and paste the output below.
 ----------
 
-
+hello.txt
 
 ==========
 18. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -189,7 +214,8 @@ List the files in the directory you're currently in (which should be home).
 Copy and paste the output below.
 ----------
 
-
+a stuff
+a stuff/hello.txt
 
 ==========
 19. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -198,7 +224,7 @@ $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
 ----------
-
+tar: Failed to open 'stuff.tar'
 
 
 ==========
@@ -206,6 +232,15 @@ Copy and paste the output below.
 
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
+Applications			__MACOSX
+Desktop				filename.mtec1002-lab-02.zip
+Documents			filename.txt
+Downloads			hello.txt
+Library				mtec1002-lab-02
+Movies				mtec1002-lab-02 2
+Music				stuff
+Pictures			stuff.tar
+Public
 
 
 
@@ -216,6 +251,14 @@ gzip stuff.tar
 
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
+Applications			__MACOSX
+Desktop				filename.mtec1002-lab-02.zip
+Documents			filename.txt
+Downloads			hello.txt
+Library				mtec1002-lab-02
+Movies				mtec1002-lab-02 2
+Music				stuff
+Pictures			stuff.tar.gz
 
 
 
